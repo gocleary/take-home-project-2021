@@ -1,0 +1,27 @@
+.Cleary-chevron {
+  path,
+  g {
+    stroke: var(--border-color);
+    fill: var(--border-color);
+  }
+
+  &.Cleary-chevron--hover {
+    @include hover-device {
+      &:hover {
+        path,
+        g {
+          stroke: var(--text-color-secondary);
+          fill: var(--text-color-secondary);
+        }
+      }
+    }
+  }
+
+  &.Cleary-chevron--active {
+    path,
+    g {
+      stroke: var(--highlight-color);
+      fill: var(--highlight-color);
+    }
+  }
+}

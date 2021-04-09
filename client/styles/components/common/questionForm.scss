@@ -1,0 +1,9 @@
+.QuestionForm {
+  .CancelButton {
+    top: 3px;
+
+    @include small-size {
+      top: 5px;
+    }
+  }
+}

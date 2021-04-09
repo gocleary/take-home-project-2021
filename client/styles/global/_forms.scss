@@ -1,0 +1,243 @@
+// FORMS
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+@mixin disabledFormField() {
+  opacity: 0.8;
+  cursor: not-allowed;
+
+  &:hover {
+    border-color: var(--border-color);
+  }
+}
+
+input {
+  display: block;
+  height: 38px;
+  margin: 0;
+  padding: 0 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    border-color: var(--highlight-color);
+  }
+
+  &:invalid {
+    border-color: $error-color;
+  }
+}
+
+input,
+textarea {
+  &.error,
+  &.error:focus {
+    border: 1px solid $error-color;
+    background-color: var(--dynamic-color-input-textarea-error--error-color);
+  }
+
+  &::placeholder {
+    color: var(--text-color-muted);
+  }
+
+  &:disabled {
+    @include disabledFormField;
+  }
+}
+
+textarea {
+  display: block;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    border-color: var(--highlight-color);
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  input,
+  textarea {
+    width: 100%;
+  }
+}
+
+.form-group-inline {
+  margin-bottom: 1rem;
+
+  input {
+    display: inline-block;
+  }
+
+  label,
+  input,
+  button {
+    margin-right: 1rem;
+  }
+}
+
+.form-inline-check {
+  input {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  font-weight: 600;
+}
+
+.form-group-inline-radio {
+  input {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+    margin-right: 6px;
+  }
+
+  input:first-of-type {
+    margin-left: 0;
+  }
+}
+
+.required-form-label {
+  &:after {
+    color: red;
+    content: ' *';
+  }
+}
+
+.btn-primary {
+  @include buttonPrimary(--btn-primary-color);
+}
+
+.btn-lg {
+  height: 3.429rem !important;
+}
+
+.btn-primary-sm {
+  @include buttonPrimary(--btn-primary-color);
+  @include buttonSmall();
+}
+
+.btn-secondary {
+  @include buttonSecondary(--btn-primary-color);
+}
+
+.btn-secondary-settings-toolbar {
+  @include buttonSecondary(--subnav-text-color);
+
+  background-color: transparent;
+
+  &:hover {
+    border: 1px solid var(--subnav-text-active-color);
+    color: var(--subnav-text-active-color);
+    background-color: transparent !important;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid var(--subnav-text-color) !important;
+    color: var(--subnav-text-color) !important;
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    border: 1px solid var(--subnav-text-color);
+    color: var(--subnav-text-color);
+    background-color: transparent !important;
+  }
+}
+
+.btn-secondary-danger {
+  @include buttonSecondary(--danger-color);
+  @include linkText(--danger-color, --font-weight-inherit);
+}
+
+.btn-secondary-danger-sm {
+  @include buttonSecondary(--danger-color);
+  @include linkText(--danger-color, --font-weight-inherit);
+  @include buttonSmall();
+}
+
+
+.btn-secondary-sm {
+  @include buttonSecondary(--btn-primary-color);
+  @include buttonSmall();
+}
+
+.btn-muted {
+  @include buttonMuted(--btn-muted-color);
+}
+
+.btn-danger {
+  @include buttonPrimary(--danger-color);
+}
+
+.btn-text-danger {
+  @include linkText(--danger-color, --link-font-weight);
+}
+
+.btn-dark {
+  @include buttonPrimary(--dark-gray);
+}
+
+.btn-dark-sm {
+  @include buttonPrimary(--dark-gray);
+  @include buttonSmall();
+}
+
+// react select overrides, now necessary due to the lack of silvertip overrides.
+
+.Select {
+  &.is-focused:not(.is-open) > .Select-control {
+    border-color: var(--highlight-color);
+    box-shadow: none;
+  }
+
+  .Select-input > input {
+    padding: 0;
+  }
+
+  &.is-open > .Select-control {
+    border-color: var(--highlight-color);
+  }
+
+  .Select-control {
+    border-color: var(--border-color);
+
+    &:hover {
+      box-shadow: none;
+      border-color: var(--highlight-color);
+    }
+  }
+
+  &.is-disabled {
+    .Select-control {
+      @include disabledFormField;
+    }
+  }
+
+  .Select-menu-outer {
+    border-color: var(--highlight-color);
+    border-top-color: var(--border-color);
+  }
+
+  .Select-placeholder,
+  .Select-noresults {
+    color: var(--text-color-muted);
+  }
+
+  .Select-clear-zone {
+    color: var(--text-color-secondary);
+  }
+}

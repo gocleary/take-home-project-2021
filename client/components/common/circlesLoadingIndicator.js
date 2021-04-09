@@ -1,0 +1,355 @@
+import React from 'react'
+import Lottie from 'react-lottie'
+
+const animationData = {
+  v: '5.6.10',
+  fr: 25,
+  ip: 0,
+  op: 40,
+  w: 200,
+  h: 200,
+  nm: 'Loading',
+  ddd: 0,
+  assets: [],
+  layers: [
+    {
+      ddd: 0,
+      ind: 1,
+      ty: 3,
+      nm: 'NULL CONTROL',
+      sr: 1,
+      ks: {
+        o: { a: 0, k: 0, ix: 11 },
+        r: { a: 0, k: 0, ix: 10 },
+        p: { a: 0, k: [100, 100, 0], ix: 2 },
+        a: { a: 0, k: [60, 60, 0], ix: 1 },
+        s: { a: 0, k: [100, 100, 100], ix: 6 },
+      },
+      ao: 0,
+      ip: 0,
+      op: 125,
+      st: 0,
+      bm: 0,
+    },
+    {
+      ddd: 0,
+      ind: 2,
+      ty: 4,
+      nm: 'Shape Layer 5',
+      parent: 1,
+      sr: 1,
+      ks: {
+        o: { a: 0, k: 100, ix: 11 },
+        r: { a: 0, k: 0, ix: 10 },
+        p: { a: 0, k: [100, 60, 0], ix: 2 },
+        a: { a: 0, k: [-39.63, 3.901, 0], ix: 1 },
+        s: {
+          a: 1,
+          k: [
+            {
+              i: { x: [0.22, 0.22, 0.22], y: [1, 1, 1] },
+              o: { x: [0.3, 0.3, 0.3], y: [0, 0, 0] },
+              t: 14,
+              s: [100, 100, 100],
+            },
+            {
+              i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] },
+              o: { x: [0.78, 0.78, 0.78], y: [0, 0, 0] },
+              t: 27,
+              s: [102, 102, 100],
+            },
+            { t: 39, s: [100, 100, 100] },
+          ],
+          ix: 6,
+        },
+      },
+      ao: 0,
+      shapes: [
+        {
+          ty: 'gr',
+          it: [
+            {
+              d: 1,
+              ty: 'el',
+              s: { a: 0, k: [27.602, 27.602], ix: 2 },
+              p: { a: 0, k: [0, 0], ix: 3 },
+              nm: 'Ellipse Path 1',
+              mn: 'ADBE Vector Shape - Ellipse',
+              hd: false,
+            },
+            {
+              ty: 'fl',
+              c: {
+                a: 1,
+                k: [
+                  {
+                    i: { x: [0.21], y: [1] },
+                    o: { x: [0.79], y: [0] },
+                    t: 14,
+                    s: [0.909803921569, 0.909803921569, 0.913725490196, 1],
+                  },
+                  {
+                    i: { x: [0.667], y: [1] },
+                    o: { x: [0.79], y: [0] },
+                    t: 27,
+                    s: [0.188235297799, 0.470588237047, 0.956862747669, 1],
+                  },
+                  { t: 39, s: [0.909803921569, 0.909803921569, 0.913725490196, 1] },
+                ],
+                ix: 4,
+              },
+              o: { a: 0, k: 100, ix: 5 },
+              r: 1,
+              bm: 0,
+              nm: 'Fill 1',
+              mn: 'ADBE Vector Graphic - Fill',
+              hd: false,
+            },
+            {
+              ty: 'tr',
+              p: { a: 0, k: [-39.63, 3.901], ix: 2 },
+              a: { a: 0, k: [0, 0], ix: 1 },
+              s: { a: 0, k: [100, 100], ix: 3 },
+              r: { a: 0, k: 0, ix: 6 },
+              o: { a: 0, k: 100, ix: 7 },
+              sk: { a: 0, k: 0, ix: 4 },
+              sa: { a: 0, k: 0, ix: 5 },
+              nm: 'Transform',
+            },
+          ],
+          nm: 'Ellipse 1',
+          np: 2,
+          cix: 2,
+          bm: 0,
+          ix: 1,
+          mn: 'ADBE Vector Group',
+          hd: false,
+        },
+      ],
+      ip: 0,
+      op: 139,
+      st: 14,
+      bm: 0,
+    },
+    {
+      ddd: 0,
+      ind: 3,
+      ty: 4,
+      nm: 'Shape Layer 4',
+      parent: 1,
+      sr: 1,
+      ks: {
+        o: { a: 0, k: 100, ix: 11 },
+        r: { a: 0, k: 0, ix: 10 },
+        p: { a: 0, k: [60, 60, 0], ix: 2 },
+        a: { a: 0, k: [-39.63, 3.901, 0], ix: 1 },
+        s: {
+          a: 1,
+          k: [
+            {
+              i: { x: [0.22, 0.22, 0.22], y: [1, 1, 1] },
+              o: { x: [0.3, 0.3, 0.3], y: [0, 0, 0] },
+              t: 7,
+              s: [100, 100, 100],
+            },
+            {
+              i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] },
+              o: { x: [0.78, 0.78, 0.78], y: [0, 0, 0] },
+              t: 20,
+              s: [102, 102, 100],
+            },
+            { t: 32, s: [100, 100, 100] },
+          ],
+          ix: 6,
+        },
+      },
+      ao: 0,
+      shapes: [
+        {
+          ty: 'gr',
+          it: [
+            {
+              d: 1,
+              ty: 'el',
+              s: { a: 0, k: [27.602, 27.602], ix: 2 },
+              p: { a: 0, k: [0, 0], ix: 3 },
+              nm: 'Ellipse Path 1',
+              mn: 'ADBE Vector Shape - Ellipse',
+              hd: false,
+            },
+            {
+              ty: 'fl',
+              c: {
+                a: 1,
+                k: [
+                  {
+                    i: { x: [0.21], y: [1] },
+                    o: { x: [0.79], y: [0] },
+                    t: 7,
+                    s: [0.909803921569, 0.909803921569, 0.913725490196, 1],
+                  },
+                  {
+                    i: { x: [0.667], y: [1] },
+                    o: { x: [0.79], y: [0] },
+                    t: 20,
+                    s: [0.188235297799, 0.470588237047, 0.956862747669, 1],
+                  },
+                  { t: 32, s: [0.909803921569, 0.909803921569, 0.913725490196, 1] },
+                ],
+                ix: 4,
+              },
+              o: { a: 0, k: 100, ix: 5 },
+              r: 1,
+              bm: 0,
+              nm: 'Fill 1',
+              mn: 'ADBE Vector Graphic - Fill',
+              hd: false,
+            },
+            {
+              ty: 'tr',
+              p: { a: 0, k: [-39.63, 3.901], ix: 2 },
+              a: { a: 0, k: [0, 0], ix: 1 },
+              s: { a: 0, k: [100, 100], ix: 3 },
+              r: { a: 0, k: 0, ix: 6 },
+              o: { a: 0, k: 100, ix: 7 },
+              sk: { a: 0, k: 0, ix: 4 },
+              sa: { a: 0, k: 0, ix: 5 },
+              nm: 'Transform',
+            },
+          ],
+          nm: 'Ellipse 1',
+          np: 2,
+          cix: 2,
+          bm: 0,
+          ix: 1,
+          mn: 'ADBE Vector Group',
+          hd: false,
+        },
+      ],
+      ip: 0,
+      op: 132,
+      st: 7,
+      bm: 0,
+    },
+    {
+      ddd: 0,
+      ind: 4,
+      ty: 4,
+      nm: 'Shape Layer 1',
+      parent: 1,
+      sr: 1,
+      ks: {
+        o: { a: 0, k: 100, ix: 11 },
+        r: { a: 0, k: 0, ix: 10 },
+        p: { a: 0, k: [20, 60, 0], ix: 2 },
+        a: { a: 0, k: [-39.63, 3.901, 0], ix: 1 },
+        s: {
+          a: 1,
+          k: [
+            {
+              i: { x: [0.22, 0.22, 0.22], y: [1, 1, 1] },
+              o: { x: [0.3, 0.3, 0.3], y: [0, 0, 0] },
+              t: 0,
+              s: [100, 100, 100],
+            },
+            {
+              i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] },
+              o: { x: [0.78, 0.78, 0.78], y: [0, 0, 0] },
+              t: 13,
+              s: [102, 102, 100],
+            },
+            { t: 25, s: [100, 100, 100] },
+          ],
+          ix: 6,
+        },
+      },
+      ao: 0,
+      shapes: [
+        {
+          ty: 'gr',
+          it: [
+            {
+              d: 1,
+              ty: 'el',
+              s: { a: 0, k: [27.602, 27.602], ix: 2 },
+              p: { a: 0, k: [0, 0], ix: 3 },
+              nm: 'Ellipse Path 1',
+              mn: 'ADBE Vector Shape - Ellipse',
+              hd: false,
+            },
+            {
+              ty: 'fl',
+              c: {
+                a: 1,
+                k: [
+                  {
+                    i: { x: [0.21], y: [1] },
+                    o: { x: [0.79], y: [0] },
+                    t: 0,
+                    s: [0.909803921569, 0.909803921569, 0.913725490196, 1],
+                  },
+                  {
+                    i: { x: [0.667], y: [1] },
+                    o: { x: [0.79], y: [0] },
+                    t: 13,
+                    s: [0.188235297799, 0.470588237047, 0.956862747669, 1],
+                  },
+                  { t: 25, s: [0.909803921569, 0.909803921569, 0.913725490196, 1] },
+                ],
+                ix: 4,
+              },
+              o: { a: 0, k: 100, ix: 5 },
+              r: 1,
+              bm: 0,
+              nm: 'Fill 1',
+              mn: 'ADBE Vector Graphic - Fill',
+              hd: false,
+            },
+            {
+              ty: 'tr',
+              p: { a: 0, k: [-39.63, 3.901], ix: 2 },
+              a: { a: 0, k: [0, 0], ix: 1 },
+              s: { a: 0, k: [100, 100], ix: 3 },
+              r: { a: 0, k: 0, ix: 6 },
+              o: { a: 0, k: 100, ix: 7 },
+              sk: { a: 0, k: 0, ix: 4 },
+              sa: { a: 0, k: 0, ix: 5 },
+              nm: 'Transform',
+            },
+          ],
+          nm: 'Ellipse 1',
+          np: 2,
+          cix: 2,
+          bm: 0,
+          ix: 1,
+          mn: 'ADBE Vector Group',
+          hd: false,
+        },
+      ],
+      ip: 0,
+      op: 125,
+      st: 0,
+      bm: 0,
+    },
+  ],
+  markers: [],
+}
+
+const CirclesLoadingIndicator = ({ className }) => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
+
+  return (
+    <div className={className}>
+      <Lottie options={defaultOptions} height={50} width={50} />
+    </div>
+  )
+}
+
+export default CirclesLoadingIndicator

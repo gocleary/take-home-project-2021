@@ -1,0 +1,23 @@
+.EventCard {
+  /*
+  * Set height to the equivalent of 2 lines so that card height
+  * is always the same for both 1 and 2 lines of title text.
+  */
+  h5 {
+    height: 2.2em; // `em` instead of `rem` because line-height is relative to h5's font-size
+    line-height: 1.1; // Unitless: always relative to the container's font-size
+  }
+
+  .EventCardBody {
+    min-height: 250px; // set min height to account for draft events without much content
+  }
+
+  @include max-media-width($bootstrap-lg) {
+    &.d-inline-block {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-top: 1rem;
+    }
+  }
+}

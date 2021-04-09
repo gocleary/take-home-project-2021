@@ -1,0 +1,24 @@
+body {
+  // Bottom space to prevent 'send feedback' button to block things on the screen
+  padding-bottom: 4em;
+  background-color: var(--background-color);
+
+  #cleary-app-container {
+    z-index: $zindex-base;
+    position: relative;
+  }
+}
+
+// Overriding Froala BG Color - Start
+// Used for overriding bg color of pasted content in froala that has background-color set
+
+// initial state
+.override-froala-children-bg-color * {
+  background-color: inherit !important;
+}
+
+// hover state
+.override-froala-children-bg-color.hover-background-color:hover * {
+  background-color: var(--background-color) !important;
+}
+// Overriding Froala BG Color - End

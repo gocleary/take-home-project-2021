@@ -1,0 +1,35 @@
+/*  import everything other than _variables.scss files here
+other stylesheets should import their own customized variables, then import this file */
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'react-select/dist/react-select.css';
+@import 'react-datepicker/dist/react-datepicker.css';
+@import 'react-toastify/dist/ReactToastify.min.css';
+@import 'react-virtualized/styles.css';
+@import '@uppy/core/dist/style.css';
+@import '@uppy/dashboard/dist/style.css';
+@import 'plyr/dist/plyr.css';
+
+/* Require Editor CSS files and Font Awesome */
+@import 'froala-editor/css/froala_style.min.css';
+@import 'froala-editor/css/froala_editor.pkgd.min.css';
+@import 'froala-editor/css/plugins.pkgd.min.css';
+
+/* commenting this out until we add support for image_tui */
+
+/* @import 'froala-editor/css/third_party/image_tui.min.css'; */
+@import 'font-awesome/css/fonts/*';
+
+/*
+ the docs at https://www.froala.com/wysiwyg-editor/docs/framework-plugins/react
+ said something about font awesome but it seems to work fine without it? */
+
+/* @import 'font-awesome/css/font-awesome.css'; */
+
+@import '_mixins.scss';
+@import 'vendor/*';
+@import 'global/*';
+@import 'utils/*';
+@import 'components/**';
+
+/* include scss files that are co-located alongside components */
+@import '../components/**';

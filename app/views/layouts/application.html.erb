@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TakeHomeProject2021</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= @page_variables[:app_name] %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= stylesheet_pack_tag 'default' %>
+
+    <%= favicon_link_tag "#{@page_variables[:favicon_url]}" %>
   </head>
 
   <body>
     <%= yield %>
+
+    <%= javascript_pack_tag "application" %>
   </body>
 </html>

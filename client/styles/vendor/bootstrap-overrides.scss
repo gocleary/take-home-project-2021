@@ -1,0 +1,10 @@
+.popover {
+  border: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: var(--square-border-radius);
+  max-width: unset;
+}
+
+.card {
+  background-color: var(--card-background-color);
+}

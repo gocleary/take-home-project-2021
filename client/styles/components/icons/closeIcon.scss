@@ -1,0 +1,15 @@
+.CloseIcon {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  line-height: 0;
+
+  stroke: var(--border-color);
+  fill: var(--border-color);
+
+  &:hover {
+    stroke: var(--dynamic-color-close-icon--border-color);
+    fill: var(--dynamic-color-close-icon--border-color);
+  }
+}

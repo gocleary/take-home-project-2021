@@ -1,0 +1,23 @@
+.EmployeeMiniCard {
+  display: flex;
+  align-items: center;
+  border-radius: var(--square-border-radius-small);
+  background-color: white;
+  min-height: 58px;
+
+  a {
+    color: var(--text-color-primary);
+  }
+
+  &:hover {
+    background-color: var(--background-color);
+  }
+}
+
+.EmployeeMiniCard-content {
+  flex: 1;
+
+  div {
+    line-height: 1.2;
+  }
+}

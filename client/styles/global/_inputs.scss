@@ -1,0 +1,29 @@
+.Input {
+  padding: 0;
+  min-width: 100%;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--secondary-gray);
+  resize: none;
+  font-size: 1.3rem;
+
+  &:hover {
+    border-color: var(--highlight-color);
+  }
+
+  &:focus {
+    border-color: var(--highlight-color);
+  }
+}
+
+.InlineEditInput {
+  @extend .Input;
+
+  height: 2.28rem;
+  color: var(--highlight-color);
+  font-size: unset;
+
+  &:focus {
+    border-bottom: 1px solid var(--highlight-color);
+  }
+}

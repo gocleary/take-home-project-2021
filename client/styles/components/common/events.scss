@@ -1,0 +1,104 @@
+@keyframes new-question-fade {
+  0% {
+    background-color: var(--dynamic-color-primary-color-lightest--highlight-color);
+  }
+
+  50% {
+    background-color: var(--dynamic-color-primary-color-lightest--highlight-color);
+  }
+
+  100% {
+    background-color: var(--card-background-color);
+  }
+}
+
+.EventPage-questionListItem {
+  & .FroalaEditor .fr-toolbar {
+    & span {
+      font-size: 1rem !important;
+    }
+
+    & svg {
+      width: 1.5rem !important;
+    }
+  }
+}
+
+.EventPage-questionListItem.AnimateNewlyAddedQuestionBackground {
+  animation: new-question-fade 3000ms;
+}
+
+.QuestionFormFroalaEditor,
+.QuestionContent {
+  .fr-view,
+  .fr-view > p {
+    @extend .break-word;
+    font-size: 1.25rem !important;
+  }
+}
+
+.AnswerFormFroalaEditor,
+.AnswerContent {
+  .fr-view > p {
+    @extend .break-word;
+    font-size: $base-font-size !important;
+  }
+}
+
+.AnswerList {
+  & > div > div:last-of-type {
+    margin-bottom: 0 !important;
+  }
+}
+
+.EventPageTabs {
+  .nav-link {
+    &:hover {
+      border: 0;
+    }
+  }
+
+  .badge {
+    font-weight: 500;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    bottom: 2px;
+  }
+}
+
+.border-error {
+  border-color: $error-color !important;
+
+  &:hover {
+    border-color: $error-color !important;
+  }
+
+  &:focus {
+    border-color: $error-color !important;
+  }
+}
+
+.EventTitle {
+  padding-left: 0px !important;
+}
+
+// Small devices (landscape phones, less than 768px)
+// Hide froala circle-plus-icon additional actions
+@include small-size {
+  .fr-quick-insert {
+    display: none;
+  }
+
+  .EventPageFilters {
+    button {
+      font-size: 1rem;
+    }
+  }
+
+  .EventCardQuestionCount {
+    display: flex;
+    align-items: center;
+  }
+}
+

@@ -1,0 +1,29 @@
+.fr-popup {
+  z-index: $zindex-popover !important;
+}
+
+.fr-view {
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--link-color) !important; // using !important because copy-paste from google docs has inline styles we dont want
+    text-decoration: none;
+
+    &:hover {
+      color: var(--dynamic-color-ql-editor-link--link-color) !important; //color(var(--link-color) shade(25%));
+    }
+  }
+  img {
+    &.fr-dii {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.fr-wrapper.show-placeholder .fr-placeholder {
+  white-space: unset !important;
+  text-overflow: unset !important;
+}

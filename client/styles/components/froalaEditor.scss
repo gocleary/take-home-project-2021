@@ -1,0 +1,55 @@
+.FroalaEditor {
+  margin-left: -1.25rem !important;
+  margin-right: -1.25rem !important;
+
+  .fr-toolbar.fr-top,
+  .fr-box.fr-basic .fr-wrapper,
+  .second-toolbar {
+    border: 0;
+  }
+
+  .fr-toolbar {
+    border-top-right-radius: var(--square-border-radius);
+    border-top-left-radius: var(--square-border-radius);
+
+    &.fr-top {
+      border-top: 1px solid var(--dynamic-color-ql-snow-hover--background-color);
+      background-color: var(--dynamic-color-ql-snow-hover--background-color);
+    }
+    .fr-command.fr-btn {
+      margin: 4px 0px;
+    }
+
+    .fr-btn-grp {
+      margin-left: 1px !important;
+      margin-right: 0px !important;
+    }
+
+    .fr-view {
+      max-width: 628px;
+    }
+  }
+
+  .fr-toolbar .fr-newline {
+    @extend .m-0;
+  }
+
+  .fr-box.fr-basic .fr-element {
+    margin: auto 2.5px;
+  }
+
+  .second-toolbar {
+    background-color: var(--dynamic-color-ql-snow-hover--background-color);
+  }
+
+  .fr-wrapper.show-placeholder .fr-placeholder {
+    position: absolute !important;
+    margin-top: 0px !important;
+  }
+}
+
+@include small-size {
+  .fr-quick-insert {
+    display: none;
+  }
+}

@@ -1,0 +1,51 @@
+// By default reactstrap's tooltip, container
+// and arrow are black. The rules found in this
+// file are necessary to make the tooltip adopt
+// cleary's theme.
+.Tooltip {
+  opacity: 1 !important;
+  margin-top: 0.9rem;
+
+  .TooltipBox {
+    color: var(--text-color-primary);
+    background-color: var(--background-color);
+    border: solid 1px var(--text-color-muted);
+  }
+
+  // The ::before and ::after rules help us
+  // build the triangle that is used by the tooltip.
+  // Were using this border technique to dray two triangles.
+  // The first one, in the background, has the color of the
+  // tooltip background color, the second one in the foreground,
+  // has the color of the tooltip container.
+  .arrow {
+    top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.6rem;
+    width: 1.2rem;
+
+    // This is the background triangle that has
+    // the grayish --text-color-muted (in cleary), which matches
+    // the tooltips border, which is set to --text-color-muted.
+    &::before {
+      top: unset;
+      border-top-color: transparent;
+      bottom: 4px !important;
+      border-width: 0 0.6rem 0.6rem !important;
+      border-bottom-color: var(--text-color-muted);
+    }
+
+    // This is the foreground of the triangle, it
+    // matches th tooltips container color, --background-color
+    &::after {
+      bottom: 2px;
+      position: absolute;
+      content: '';
+      border-left: 0.6rem solid transparent;
+      border-right: 0.6rem solid transparent;
+      border-bottom: 0.6rem solid var(--background-color);
+    }
+  }
+}

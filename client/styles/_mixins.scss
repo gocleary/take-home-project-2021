@@ -1,0 +1,217 @@
+@import '_variables.scss';
+
+@mixin header($fontSize) {
+  color: var(--text-color-primary);
+  font-size: var(#{$fontSize});
+  line-height: $header-line-height;
+  text-transform: none;
+  font-weight: 500;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin label() {
+  color: var(--text-color-secondary);
+  font-size: $label-font-size;
+  text-transform: uppercase;
+}
+
+@mixin subtext() {
+  color: var(--text-color-secondary);
+}
+
+@mixin linkText($color: --link-color, $font-weight: inherit) {
+  color: var(#{$color});
+  font-weight: var(#{$font-weight});
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--dynamic-color-link-text#{$color});
+    font-weight: var(#{$font-weight});
+  }
+}
+
+@mixin linkColors($color: --link-color) {
+  a,
+  a:visited,
+  a:active {
+    @include linkText($color, --font-weight-inherit);
+  }
+}
+
+@mixin button() {
+  outline: none !important;
+  border-radius: var(--button-border-radius) !important;
+  min-width: 140px;
+  height: 2.429rem;
+  padding: 0px 20px;
+  cursor: pointer;
+  border: none;
+
+  font-weight: 500;
+  border-radius: 4px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.dropdown-toggle {
+    min-width: auto;
+    padding: 0.75em;
+
+    &:after {
+      margin: 0;
+    }
+  }
+
+  &:hover {
+    font-weight: 500;
+  }
+}
+
+@mixin profileImage() {
+  border: 1px solid var(--border-color);
+  border-radius: var(--profile-image-border-radius);
+}
+
+@mixin buttonSmall() {
+  height: 2.143rem;
+  min-width: 100px;
+}
+
+@mixin buttonPrimary($btn-color, $color: --white-pure) {
+  @include button();
+
+  background-color: var(#{$btn-color});
+  color: var(#{$color}) !important;
+
+  &:hover {
+    background-color: var(--dynamic-color-button-primary-hover#{$btn-color});
+  }
+
+  &:active,
+  &:focus {
+    background-color: var(--dynamic-color-button-primary-active#{$btn-color}) !important;
+    border-radius: var(--button-border-radius) !important;
+  }
+
+  &:disabled {
+    background-color: var(--dynamic-color-button-primary-disabled#{$btn-color});
+  }
+
+  .show &.dropdown-toggle {
+    background-color: var(--dynamic-color-button-primary-show-toggle#{$btn-color});
+  }
+}
+
+@mixin buttonSecondary($btn-color) {
+  @include button();
+
+  border: 1px solid var(#{$btn-color});
+  color: var(#{$btn-color});
+  background-color: white;
+
+  &:hover {
+    border: 1px solid var(--dynamic-color-button-secondary-hover-border#{$btn-color}); // color(var(#{$btn-color}) shade(15%));
+    color: var(--dynamic-color-button-secondary-hover-color#{$btn-color}); //color(var(#{$btn-color}) shade(10%));
+    background-color: white !important;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid var(--dynamic-color-button-secondary-active-border#{$btn-color}) !important; //color(var(#{$btn-color}) tint(15%));
+    color: var(--dynamic-color-button-secondary-active-color#{$btn-color}) !important; //color(var(#{$btn-color}) tint(15%));
+    background-color: white !important;
+  }
+
+  &:disabled {
+    border: 1px solid var(--dynamic-color-button-secondary-disabled-border#{$btn-color}); // color(var(#{$btn-color}) tint(30%));
+    color: var(--dynamic-color-button-secondary-disabled-color#{$btn-color}); // color(var(#{$btn-color}) tint(30%));
+    background-color: white !important;
+  }
+}
+
+@mixin buttonMuted($btn-color) {
+  @include button();
+
+  color: var(--text-color-primary) !important;
+  background-color: var(#{$btn-color});
+  border: none !important;
+
+  &:hover {
+    color: var(--text-color-primary);
+    background-color: var(--dynamic-color-button-muted-hover#{$btn-color}) !important;
+  }
+
+  &:active,
+  &:focus {
+    color: var(--text-color-primary);
+    background-color: var(--dynamic-color-button-muted-active#{$btn-color}) !important;
+  }
+
+  &:disabled {
+    color: var(--text-color-primary);
+    background-color: var(--dynamic-color-button-muted-disabled#{$btn-color}) !important;
+  }
+}
+
+//breakpoint mixins
+@mixin large-size {
+  @media only screen and (min-width: $bootstrap-md) and (max-width: $bootstrap-lg) {
+    @content;
+  }
+}
+
+@mixin medium-size {
+  @media only screen and (min-width: $bootstrap-sm) and (max-width: $bootstrap-md) {
+    @content;
+  }
+}
+
+@mixin small-size {
+  @media only screen and (max-width: $bootstrap-sm) {
+    @content;
+  }
+}
+
+@mixin max-media-width($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-media-width($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+// Use when css should only be applied to touchscreen devices
+@mixin touchscreen {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+// Use when css should only be applied to devices that support hover states
+@mixin hover-device {
+  @media (hover: hover) {
+    @content;
+  }
+}

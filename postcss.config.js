@@ -1,12 +1,10 @@
 module.exports = {
+  parser: "postcss-scss", // so we use inline comments in css
   plugins: [
-    require('postcss-import'),
-    require('postcss-flexbugs-fixes'),
-    require('postcss-preset-env')({
-      autoprefixer: {
-        flexbox: 'no-2009'
-      },
-      stage: 3
-    })
+    require('postcss-easy-import')({
+      extensions: ['.css', '.scss']
+    }), // resolves files with globs
+    require('precss'), // lets us use Sass-like markup and staged CSS features in CSS.
+    require('postcss-custom-properties') // CSS variables
   ]
 }

@@ -1,0 +1,74 @@
+.text-smallest {
+  font-size: 0.786em;
+}
+
+.text-small {
+  font-size: 0.857rem;
+}
+
+.text-normal {
+  font-size: 1rem;
+}
+
+.text-sm-normal {
+  @include small-size {
+    font-size: 1rem;
+  }
+}
+
+.text-large {
+  font-size: 1.25rem;
+}
+
+.overflow-wrap-break-word {
+  overflow-wrap: break-word;
+}
+
+.word-break-all {
+  word-break: break-all;
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+.monospaced {
+  font-family: monospace;
+}
+
+.ws-pre-wrap {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+.link-color {
+  color: var(--link-color) !important;
+}
+
+.text-color-primary {
+  color: var(--btn-primary-color) !important;
+}
+
+.text-muted-dark {
+  color: $mid-gray !important;
+}
+
+// Has webkit prefix, but is supported in
+// all browsers except IE
+@for $i from 1 to 4 {
+  .truncate-text-at-#{$i}-lines {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $i;
+    overflow: hidden;
+  }
+}

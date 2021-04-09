@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+html, body, div, p, blockquote, pre, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section, summary {
+  font-family: "Inter", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: $base-font-size;
+  line-height: $line-height;
+  font-weight: 400;
+  color: var(--text-color-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  @include header(--h1-font-size);
+}
+
+h2 {
+  @include header(--h2-font-size);
+}
+
+h3 {
+  @include header(--h3-font-size);
+}
+
+h4 {
+  @include header(--h4-font-size);
+}
+
+h5 {
+  @include header(--h5-font-size);
+}
+
+h6 {
+  @include header(--h6-font-size);
+}
+
+a {
+  @include linkText(--link-color, --link-font-weight);
+}
+
+a.unstyled-link {
+  color: inherit;
+}
+
+.label {
+  @include label();
+}
+
+.hover-highlight {
+  &:hover {
+    color: var(--link-color) !important;
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+@for $i from 1 to 6 {
+  .font-size-h#{$i} {
+    font-size: var(--h#{$i}-font-size);
+  }
+}

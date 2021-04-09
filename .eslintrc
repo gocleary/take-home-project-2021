@@ -1,0 +1,176 @@
+{
+  "root": true, // lmit ESLint to the cleary project only
+
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "airbnb",
+    "plugin:cypress/recommended",
+    "plugin:testing-library/react",
+    "plugin:testing-library/recommended",
+  ],
+
+  "plugins": ["react", "prettier", "cypress", "i18n-text", "no-only-tests", "testing-library"],
+
+  "env": {
+    "browser": true,
+    "cypress/globals": true,
+    "jest": true
+  },
+
+  "rules": {
+    "array-bracket-spacing": ["error"],
+    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }], // Bad: (a) => a, Good: a => a
+    "class-methods-use-this": 0, // TODO create ticket to fix by itself
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "curly": 0, // we want to allow if(returnEarly) return instead of if(returnEarly) {return early}
+    "func-names": 0, // Keep
+    "function-paren-newline": 0, // Keep
+    // "i18n-text/no-en": 2,
+    "import/extensions": 2,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/no-unresolved": 2,
+    "indent": ["error", 2, { "MemberExpression": "off" }], // 2-space indentation
+    "jsx-quotes": ["error", "prefer-single"],
+    "max-classes-per-file": 0, // TODO create ticket to fix by itself
+    "max-len": [
+      2,
+      {
+        "code": 170,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "no-alert": 0, // TODO create ticket to fix by itself
+    "no-case-declarations": 0, // TODO create ticket to fix by itself
+    "no-console": ["error", { "allow": ["error"] }], // only allow console.error
+    "no-else-return": 0, // TODO create ticket to fix by itself
+    "nonblock-statement-body-position": ["error", "beside"],
+    "no-lonely-if": 0, // TODO create ticket to fix by itself
+    "no-only-tests/no-only-tests": "error",
+    "no-param-reassign": 0, // Keep
+    "no-restricted-globals": 0, // TODO create ticket to fix by itself,
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": ["client"],
+        "patterns": ["../*"] // Used to prevent `import from from '../bar/baz'`
+      }
+    ],
+    "no-return-assign": 0,
+    "no-shadow": 0, // TODO create ticket to fix by itself
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true
+      }
+    ],
+    "no-unused-vars": 0,
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "one-var": 0,
+    "one-var-declaration-per-line": 0,
+    "prefer-destructuring": 0, // TODO create ticket to fix by itself
+    "prefer-template": 0, // TODO create ticket to fix by itself
+    "quote-props": ["error", "consistent-as-needed"],
+    "quotes": ["error", "single"],
+    "radix": "off", // Keep, not necessary for es6 envs
+    "semi": [2, "never"], // prettier
+    "prettier/prettier": 0, // TODO create ticket to fix by itself
+    // React
+    "react/button-has-type": 0, // TODO create ticket to fix by itself
+    "react/destructuring-assignment": 0, // TODO create ticket to fix by itself
+    "react/forbid-prop-types": 0, // PropTypes work
+    "react/no-access-state-in-setstate": 0, // TODO create ticket to fix by itself
+    "react/no-array-index-key": 0, // TODO create ticket to fix by itself
+    "react/no-danger": 0, // Keep
+    "react/no-did-update-set-state": 0, // TODO create ticket to fix by itself
+    "react/no-unused-prop-types": 0, // PropTypes work
+    "react/prefer-stateless-function": 0, // TODO create ticket to fix by itself
+    "react/prop-types": 0, // PropTypes work
+    "react/require-default-props": 0, // PropTypes work
+    "react/state-in-constructor": [1, "never"],
+    "react/static-property-placement": 0, // PropTypes work
+    "react/sort-comp": [
+      "error",
+      {
+        "order": [
+          "state",
+          "static-variables",
+          "static-methods",
+          "instance-variables",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    // React JSX
+    "react/jsx-curly-spacing": [2, {"when": "never", "children": true}],
+    "react/jsx-filename-extension": 0, // Keep
+    "react/jsx-first-prop-new-line": 0, // Keep
+    "react/jsx-indent": [2, 2], // Keep
+    "react/jsx-indent-props": [2, 2], // Keep,
+    "react/jsx-one-expression-per-line": 0, // Keep
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-uses-react": 2, // Keep
+    "react/jsx-uses-vars": 2, // Keep
+    "react/jsx-boolean-value": 0, // Disabled assumption that no value = true
+    // JSX a11y
+    "jsx-a11y/alt-text": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/img-redundant-alt": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/media-has-caption": 0,
+
+    // While we are using the API for "UNSAFE_componentWillMount", it will violate this rule.
+    // Also
+    "camelcase": 0
+  },
+
+  "overrides": [
+    {
+      "files": ["*.spec.js", "*.test.js"],
+      "rules": {
+        "i18n-text/no-en": 0
+      }
+    }
+  ],
+
+  "globals": {
+    "I18n": false, // I18n
+    "_": false, // lodash
+    "gapi": false // google API
+  },
+
+  "parser": "babel-eslint",
+
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": {
+          "resolve": {
+            "modules": ["client", "node_modules"]
+          }
+        }
+      }
+    }
+  }
+}

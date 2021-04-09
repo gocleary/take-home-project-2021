@@ -1,0 +1,31 @@
+.EmployeeSearch {
+  text-transform: none;
+
+  // react-select overrides
+  .Select {
+    a {
+      &:hover {
+        color: var(--text-color-primary);
+      }
+    }
+  }
+
+  .Select-menu-outer {
+    max-height: 400px;
+    z-index: $zindex-dropdown;
+  }
+
+  .Select-menu {
+    max-height: 398px;
+  }
+
+  .Select-option {
+    padding: 0;
+  }
+
+  .EmployeeMiniCard {
+    background-color: inherit;
+  }
+
+  @extend .ReactSelectValues;
+}
