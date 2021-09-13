@@ -20,6 +20,8 @@ Before you start, watch this [screencast](https://www.loom.com/share/f488c7b4fe2
 
 ![Hover over UI for an at-mentioned user](at-mention-example.png)
 
+**Hint:** We use the [Tribute.js library](https://froala.com/wysiwyg-editor/examples/tribute-js/) for at-mentions in our own Froala integration.
+
 ##### Stretch
 If you have extra time, you can complete these stretch goals.
 
