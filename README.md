@@ -9,7 +9,7 @@ Screencasts are a core component of the software development lifecycle at Cleary
 Before you start, watch this [screencast](https://www.loom.com/share/f488c7b4fe2344a5a5bb98594a95a843). It demos the at-mention functionality in Cleary and gives a taste of what we're looking for.
 
 ## Required User Stories
-*Estimated time to completion: Four hours*
+*Estimated time to completion: 3-4 hours*
 
 #### As someone answering a question, I want to mention someone in my answer.
 ##### Requirements
