@@ -42,4 +42,4 @@ If you have extra time, you can complete these stretch goals.
 `./bin/webpack-dev-server`
 
 ## Asking for Help
-You can reach out to Jenna or Ryan at [first name]@gocleary.com for any questions about this take-home project. We encourage you to ask for help if you're blocked or are unsure about requirements, but consider time-boxing your troubleshooting to 20 minutes before reaching out to us.
+You can reach out to Ryan at [first name]@gocleary.com for any questions about this take-home project. We encourage you to ask for help if you're blocked or are unsure about requirements, but consider time-boxing your troubleshooting to 20 minutes before reaching out to us.
